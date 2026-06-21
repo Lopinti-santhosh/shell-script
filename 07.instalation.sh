@@ -12,5 +12,13 @@ fi
 
 dnf install mysql -y
 
+if [ $? -eq 0]
+
+then 
+   echo " sql is installed"
+else 
+   echo " sql is not installed"
+
+fi 
 
 
