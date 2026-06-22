@@ -27,10 +27,18 @@ then
     echo "you are not super user"
 else
    echo " you are  super user"
+
 fi
 
-dnf install mysql gcc fail2ban git -y
-validate $? "Installation of mysql gcc fail2ban git success"
-
-
-
+for i in {$@}
+do
+ echo "package to install: $i"
+ dnf list installed $i &>>$logfile
+if [ $? -eq 0 ]
+    then
+        echo -e "$i already installed...$Y SKIPPING $N"
+    else
+        dnf install $i -y &>>$logfile
+        validate $? "Installation of $i"
+    fi
+done
