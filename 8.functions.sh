@@ -1,6 +1,9 @@
 #!/bin/bash
 
 USERID=$(id -u)
+timestamp=$(date +%f-%h-%m-%s)
+scriptname=$($0 | cut -d "/" -f1)
+logfile=/tmp/${scriptname}_${timestamp}.log
 
 validate(){
     if [ $1 -ne 0 ]
