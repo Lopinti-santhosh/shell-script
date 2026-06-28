@@ -1,6 +1,6 @@
 #! /bin/bash
 
-course="deops from other script"
+course="santhosh"
 
 echo "after calling other script , course name is $course"
 echo "after calling other script PID : $$"
