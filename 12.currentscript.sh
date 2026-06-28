@@ -8,4 +8,4 @@ echo "before calling current script PID , $$ "
 ./13.otherscript.sh
 
 echo "after calling current script , course name is $course"
-echo "after calling current script PID , $$ "
+echo "after calling current script PID : $$"
