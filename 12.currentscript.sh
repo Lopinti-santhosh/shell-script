@@ -1,11 +1,11 @@
 #!/bin/bash
 
-course="deops from other script"
+course="deops from current script"
 
-echo "before calling other script , course name is $course"
-echo "before calling other script PID , $$ "
+echo "before calling current script , course name is $course"
+echo "before calling current script PID , $$ "
 
 ./13.otherscript.sh
 
-echo "after calling other script , course name is $course"
-echo "after calling other script PID , $$ "
+echo "after calling current script , course name is $course"
+echo "after calling current script PID , $$ "
